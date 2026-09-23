@@ -1,0 +1,22 @@
+# ninja log v5
+7	340	8118776199278592	CMakeFiles/board.dir/Core/Src/main.c.obj	75d9052df34c8d65
+22	376	8118776199374639	CMakeFiles/board.dir/Core/Src/stm32f4xx_it.c.obj	a94f6e18cf0f9241
+37	397	8118776199791003	CMakeFiles/board.dir/Core/Src/stm32f4xx_hal_msp.c.obj	20a526a9dc7f211e
+52	398	8118776198530187	CMakeFiles/board.dir/Core/Src/sysmem.c.obj	c1068c31a85847e6
+68	400	8118776198957124	CMakeFiles/board.dir/Core/Src/syscalls.c.obj	6fe03f4f94c46b75
+84	401	8118776198778464	CMakeFiles/board.dir/startup_stm32f407xx.s.obj	90109d5967770afc
+99	402	8118776200084288	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj	1a93d6dd9314a97b
+136	430	8118776200692449	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj	d84fbf096d0df8a4
+117	452	8118776200917020	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj	7d2c49e9bb5f8d19
+154	469	8118776201096307	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj	a7c3db085d33c006
+173	502	8118776201391616	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj	dc09d1957cb04f67
+191	504	8118776201391616	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj	f944754ddcbf6600
+214	573	8118776202120628	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj	e700ec09798ee4cd
+303	578	8118776202151530	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj	be7e290facdd56ea
+280	581	8118776202173632	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj	8b460dcf371d5c4c
+256	598	8118776202389439	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj	1f3e07c7521b9ce4
+235	599	8118776202394641	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj	61b91dad967f7818
+346	628	8118776202661890	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj	3463f1d77b5cac3
+320	640	8118776202776502	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj	13c927840d73ecf3
+376	652	8118776202918883	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj	1b3443df22771e81
+653	834	8118776204713156	board.elf	d97927ee8246668b
