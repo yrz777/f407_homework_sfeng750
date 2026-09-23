@@ -9,7 +9,7 @@
 ![时钟树配置](assets/hw1_cubemx_clock.png)
 
 **(2) GPIO 引脚配置**
-将 PA5 配置为 GPIO_Output，用于控制 LED。
+将 PE5 配置为 GPIO_Output，用于控制 LED。
 ![GPIO配置](assets/hw1_cubemx_gpio.png)
 
 **(3) 生成工程配置**
