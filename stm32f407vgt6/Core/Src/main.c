@@ -89,7 +89,7 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM9_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4); 
+  HAL_TIM_PWM_Start(&htim9, TIM_CHANNEL_1); 
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -97,9 +97,13 @@ int main(void)
   while (1)
   {
       for (int i = 0; i < 1000; i++){
-        __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, i);
-        HAL_Delay(10);
-      }      
+        __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, i);
+        HAL_Delay(1);
+      }  
+      for (int i = 999; i >= 0; i--){
+        __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, i);
+        HAL_Delay(1);
+      }     
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
