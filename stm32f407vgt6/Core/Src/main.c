@@ -93,7 +93,10 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
-  {
+  {HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_SET);
+    HAL_Delay(3000);
+    HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_RESET);
+    HAL_Delay(3000);       
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

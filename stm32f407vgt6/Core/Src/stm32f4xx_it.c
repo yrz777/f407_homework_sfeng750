@@ -202,7 +202,7 @@ void SysTick_Handler(void)
   * @brief This function handles EXTI line0 interrupt.
   */
 void EXTI0_IRQHandler(void)
-{
+{ HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_6);
   /* USER CODE BEGIN EXTI0_IRQn 0 */
 
   /* USER CODE END EXTI0_IRQn 0 */
