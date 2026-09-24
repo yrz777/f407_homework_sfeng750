@@ -87,18 +87,19 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_TIM2_Init();
+  MX_TIM9_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4); 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
-  {HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_SET);
-    HAL_Delay(3000);
-    HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_RESET);
-    HAL_Delay(3000);       
+  {
+      for (int i = 0; i < 1000; i++){
+        __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, i);
+        HAL_Delay(10);
+      }      
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
