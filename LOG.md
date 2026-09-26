@@ -105,7 +105,7 @@
 ![CAN配置](assets/hw5_cubemx_can.png)
 
 ### 2. 代码实现
-在 main.c 的 /* USER CODE BEGIN 0 */ 区域定义接收缓冲区并重写回调函数
+在 main.c 和 can.c 内写回调函数
 ![代码截图](assets/hw5_code_main1.png)
-![代码截图](assets/hw5_code_main2.png)
-![代码截图](assets/hw5_code_main3.png)
+![代码截图](assets/hw5_code_can1.png)
+![代码截图](assets/hw5_code_can2.png)
