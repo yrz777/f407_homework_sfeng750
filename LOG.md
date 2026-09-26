@@ -90,3 +90,22 @@
 ![串口助手](assets/hw4_baud-dance_R0.jpg)
 ![串口助手](assets/hw4_baud-dance_G1.jpg)
 ![串口助手](assets/hw4_baud-dance_R1.jpg)
+
+## 作业五：实现can回环静默模式点灯
+**完成日期**：2026-09-26
+**任务描述**：使用can回环静默模式，在接收回调中反转小灯电平
+
+### 1. CubeMX 配置
+**(1) 时钟树配置**
+确保系统时钟配置为 168MHz
+![时钟树配置](assets/hw5_cubemx_clock.png)
+
+**(2) 引脚配置**
+将 PE5 设置为Output,将 PA11 和 PA12 分别设置为CAN1_RX,CAN1_TX
+![CAN配置](assets/hw5_cubemx_can.png)
+
+### 2. 代码实现
+在 main.c 的 /* USER CODE BEGIN 0 */ 区域定义接收缓冲区并重写回调函数
+![代码截图](assets/hw5_code_main1.png)
+![代码截图](assets/hw5_code_main2.png)
+![代码截图](assets/hw5_code_main3.png)
