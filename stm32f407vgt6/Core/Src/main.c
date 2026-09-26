@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "tim.h"
+#include "dma.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -45,7 +45,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+uint8_t receiveData[2];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -56,7 +56,21 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+     HAL_UART_Transmit_DMA(&huart1, receiveData, 2);
+     GPIO_PinState state = GPIO_PIN_SET;
+     if (receiveData[1] == '0'){
+        state = GPIO_PIN_SET;
+     }else if (receiveData[1] == '1') {
+    state = GPIO_PIN_RESET;
+     }  
+     if (receiveData[0] == 'R'){
+        HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, state);
+     }else if (receiveData[0] == 'G'){
+        HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, state);
+     } 
+     HAL_UART_Receive_DMA(&huart1, receiveData, 2);
+}
 /* USER CODE END 0 */
 
 /**
@@ -88,17 +102,18 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  char message[] = "Hello World";
+  
+  HAL_UART_Receive_DMA(&huart1, receiveData, 2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    HAL_UART_Transmit(&huart1, (uint8_t*)message, sizeof(message) - 1, 100);
-    HAL_Delay(1000);     
+//    
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
