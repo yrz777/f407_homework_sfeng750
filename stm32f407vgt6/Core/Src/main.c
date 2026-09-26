@@ -88,24 +88,17 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_TIM9_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htim9, TIM_CHANNEL_1); 
+  char message[] = "Hello World";
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-      for (int i = 0; i < 1000; i++){
-        __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, i);
-        HAL_Delay(1);
-      }  
-      for (int i = 999; i >= 0; i--){
-        __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, i);
-        HAL_Delay(1);
-      }     
+    HAL_UART_Transmit(&huart1, (uint8_t*)message, sizeof(message) - 1, 100);
+    HAL_Delay(1000);     
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
