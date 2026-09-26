@@ -64,3 +64,29 @@
 红色LED灯实现亮暗交替的效果
 ![亮灯效果](assets/hw3_light_max.jpg)
 ![亮灯效果](assets/hw3_light_min.jpg)
+
+## 作业四：实现串口DMA模式收发定长数据并控制LED灯的灯效
+**完成日期**：2026-09-26
+**任务描述**：结合 GPIO 输出，通过串口指令控制开发板 LED 灯的状态
+
+### 1. CubeMX 配置
+**(1) 时钟树配置**
+确保系统时钟配置为 168MHz
+![时钟树配置](assets/hw4_cubemx_clock.png)
+
+**(2) 引脚配置**
+将 PE5 和PE6 设置为Output,将 PA9 和 PA10 分别设置为USART1_TX,USART1_RX
+![GPIO配置](assets/hw4_cubemx_gpio.png)
+![USART配置](assets/hw4_cubemx_dma.png)
+
+### 2. 代码实现
+在 main.c 的 /* USER CODE BEGIN 0 */ 区域定义接收缓冲区并重写回调函数
+![代码截图](assets/hw4_code_main1.png)
+![代码截图](assets/hw4_code_main2.png)
+
+### 3. 效果图
+成功与电脑通信并控制LED灯的灯效
+![串口助手](assets/hw4_baud-dance_G0.jpg)
+![串口助手](assets/hw4_baud-dance_R0.jpg)
+![串口助手](assets/hw4_baud-dance_G1.jpg)
+![串口助手](assets/hw4_baud-dance_R1.jpg)
